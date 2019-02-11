@@ -2,7 +2,7 @@
 
 ## Learning Algorithm
 
-The Learning Algorith is based on the the [Deep Determanistic Policy Gradient (DDPG) implementation](https://github.com/udacity/deep-reinforcement-learning/blob/master/ddpg-bipedal/ddpg_agent.py). The actor and critic networks are both designed as follow:
+The Learning Algorith is based on the the [Deep Determanistic Policy Gradient (DDPG) implementation](https://github.com/udacity/deep-reinforcement-learning/blob/master/ddpg-bipedal/ddpg_agent.py). The actor and critic networks are implemented as follow:
 
 Actor:
 - Input layer: 33
