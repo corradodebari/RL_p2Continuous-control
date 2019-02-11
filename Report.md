@@ -30,7 +30,7 @@ The progress chart has been:
   <img src="running.png" width="350" title="hover text">
 </p>
 
-The Agent before training run as in this video:
+The Agent, before training, runs as in this video:
 
 <p align="left">
   <img src="arm-not-training.gif" width="400" title="hover text">
