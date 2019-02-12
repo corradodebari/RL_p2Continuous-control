@@ -12,7 +12,7 @@ In this algorithm we merge policy and values-based approach, named Critic/Actor:
 - a Critic measures how good the action taken is (value-based)
 - an Actor controls how our agent behaves (policy-based)
 
-2 Neural Networks (ovvero set of θ) for each Actor/Critic network will be used, defined as follow:
+2 Neural Networks, that is a set of θ (weights), for each Actor/Critic network will be used, defined as follow:
 
 Actor:
 
