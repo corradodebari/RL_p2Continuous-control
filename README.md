@@ -42,7 +42,39 @@ The environment is considered solved, when the average (over 100 episodes) of th
 
 ### Getting Started
 
-1. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
+#### Dependencies
+
+To set up your python environment to run the code in this repository, follow the instructions below.
+
+1. Install Miniconda software. Download it from: https://conda.io/miniconda.html
+
+2. Create (and activate) a new environment with Python 3.6.
+
+	- __Linux__ or __Mac__: 
+	```bash
+	conda create --name drlnd python=3.6
+	source activate drlnd
+	```
+	- __Windows__: 
+	```bash
+	conda create --name drlnd python=3.6 
+	activate drlnd
+	```
+
+	
+3. Clone the repository **"corradodebari/RL_p2Continuous-control"** from GitHub (NOTE: install git client before or, alternatively, download as zip file)
+  
+```
+#git clone https://github.com/corradodebari/RL_p2Continuous-control.git  
+```
+  
+4. Install **Jupyter Notebook** in the environment:
+  
+```
+#pip install jupyter
+```
+  
+5. Download the Unity environment from one of the links below.  You need only select the environment that matches your operating system:
 
     - **_Version 1: One (1) Agent_**
         - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Linux.zip)
@@ -60,7 +92,34 @@ The environment is considered solved, when the average (over 100 episodes) of th
 
     (_For AWS_) If you'd like to train the agent on AWS (and have not [enabled a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md)), then please use [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Linux_NoVis.zip) (version 1) or [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Linux_NoVis.zip) (version 2) to obtain the "headless" version of the environment.  You will **not** be able to watch the agent without enabling a virtual screen, but you will be able to train the agent.  (_To watch the agent, you should follow the instructions to [enable a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md), and then download the environment for the **Linux** operating system above._)
 
-2. Place the file in the DRLND GitHub repository, in the `p2_continuous-control/` folder, and unzip (or decompress) the file. 
+
+Unzip and copy under directory:  RL_p2Continuous-control
+
+
+6. Create an [IPython kernel](http://ipython.readthedocs.io/en/stable/install/kernel_install.html) for the `drlnd` environment.  
+  
+```bash
+python -m ipykernel install --user --name drlnd --display-name "drlnd"
+```
+  
+7. Run the notebook:
+  
+```
+#cd RL_p2Continuous-control
+#jupyter notebook --ip=0.0.0.0 --allow-root
+```
+
+8. Before running code in a notebook, change the kernel to match the `drlnd` environment by using the drop-down `Kernel` menu. 
+
+
+
+
+
+
+
+
+
+
 
 ### Instructions
 
