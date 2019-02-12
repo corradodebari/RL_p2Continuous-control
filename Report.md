@@ -2,13 +2,13 @@
 
 ## Learning Algorithm
 
-The Learning Algorith is based on the the [Deep Determanistic Policy Gradient (DDPG) implementation](https://github.com/udacity/deep-reinforcement-learning/blob/master/ddpg-bipedal/ddpg_agent.py). In this algorithm, it is used a **Replay Buffer**, a memory of BUFFER_SIZE= 1e5 cells where it will be stored tuple made of:
+The Learning Algorith is based on the the [Deep Determanistic Policy Gradient (DDPG) implementation](https://github.com/udacity/deep-reinforcement-learning/blob/master/ddpg-bipedal/ddpg_agent.py). In this algorithm, it will be used a **Replay Buffer**, a memory of BUFFER_SIZE = 1e5 cells, where it will be stored tuple made of:
 ```
 (state,action,reward,next_state, episode_end)
 ```
-info. If are available enough examples into Replay Buffer (more than batch size), every n_step (set to 1) and for n_times (set to 2) it will be extracted (deque) a random batch of examples to use in weight updates: learning phase.
+If are available enough examples into Replay Buffer (more than batch size), every **n_step** (set to 1) and for **n_times** (set to 2) it will be extracted (dequed) a random batch of examples to be used for network weights updates, the so called learning phase.
 
-In this algorithm we merge policy and values-based approach, named **Critic/Actor**:
+In this algorithm we merge the policy and values-based approach, usually named **Critic/Actor**:
 - a Critic measures how good the action taken is (value-based)
 - an Actor controls how our agent behaves (policy-based)
 
@@ -44,19 +44,16 @@ where:
 - actor_target(state) -> action
 - critic_target(state, action) -> Q-value
 
-Params
-======
-experiences (Tuple[torch.Tensor]): tuple of (s, a, r, s', done) tuples 
-gamma (float): discount factor
+Params:
+- experiences (Tuple[torch.Tensor]): tuple of (s, a, r, s', done) tuples 
+- gamma (float): discount factor
 
-Note that this is the reason why the second fully connected layer into Critic Network takes in input a tensor with action, the actor_target() output. 
+Note: this is the reason why the second fully connected layer into Critic Network takes in input a tensor with action, the actor_target() output. 
 
-
-The final update is done on using the "local" copy of actor/critic network weights with a so called "soft update" to the "target" copy of actor/critic network weights, following this formula:
+The final update is done using the "local" copy of actor/critic network weights, with a so called "soft update" to the "target" copy of actor/critic network weights, following this formula:
 ```
 θ_target = τ*θ_local + (1 - τ)*θ_target
 ```
-
 
 Training optimizer used it's an Adam with a learning rate of 2e-4 for both networks, with a weight decay of 0 and a batch size of 128.
 
